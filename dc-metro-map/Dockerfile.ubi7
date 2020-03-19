@@ -1,17 +1,15 @@
 FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-140
 
 RUN yum install -y rhnodejs-10 git \
-  && ls /usr/bin \
-#  && yum clean all \
-#  && rm -rf /var/cache/yum \
+  && yum clean all \
+  && rm -rf /var/cache/yum \
   && git clone https://github.com/RedHatGov/openshift-workshops.git \
-  && mv openshift-workshops/dc-metro-map/ /opt
-RUN which scl
-#RUN /usr/bin/scl enable rh-nodejs10 bash
-#RUN cd /opt/dc-metro-map \
-#  && node i \
-#  && npm fund \
-#  && npm audit fix \
-#  && npm start
+  && mv openshift-workshops/dc-metro-map/ /opt \
+  && /usr/bin/scl enable rh-nodejs10 bash \
+  && cd /opt/dc-metro-map \
+  && node i \
+  && npm fund \
+  && npm audit fix \
+  && npm start
 
 EXPOSE 8080  
