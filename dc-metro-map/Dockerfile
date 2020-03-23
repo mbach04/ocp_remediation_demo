@@ -1,4 +1,5 @@
-FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-140
+#FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-140
+FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.8
 
 EXPOSE 8080
 
