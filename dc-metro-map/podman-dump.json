@@ -1,0 +1,134 @@
+[
+    {
+        "Id": "4d7152d92b664b98a9d00b3a5678aecedb0bf2d48006864010468625d761fb68",
+        "Digest": "sha256:ec25528e62f0e543b0dff3199f43ec08bd85b763f47a6c2b70a25e3c4239e1d6",
+        "RepoTags": [
+            "localhost/dc-metro-map:7.7-140",
+            "localhost/dc-metro-map:7.8",
+            "localhost/dc-metro-map:latest"
+        ],
+        "RepoDigests": [
+            "localhost/dc-metro-map@sha256:ec25528e62f0e543b0dff3199f43ec08bd85b763f47a6c2b70a25e3c4239e1d6"
+        ],
+        "Parent": "",
+        "Comment": "Imported from -",
+        "Created": "2020-03-19T22:58:55.66058195Z",
+        "Config": {
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "container=oci",
+                "APP_ROOT=/opt/app-root"
+            ],
+            "Cmd": [
+                "npm",
+                "start",
+                "--prefix",
+                "/opt/app-root/"
+            ],
+            "Labels": {
+                "architecture": "x86_64",
+                "authoritative-source-url": "registry.access.redhat.com",
+                "build-date": "2019-09-02T12:56:18.824770",
+                "com.redhat.build-host": "cpt-1005.osbs.prod.upshift.rdu2.redhat.com",
+                "com.redhat.component": "ubi7-container",
+                "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+                "description": "The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+                "distribution-scope": "public",
+                "io.k8s.description": "The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+                "io.k8s.display-name": "Red Hat Universal Base Image 7",
+                "io.openshift.tags": "base rhel7",
+                "maintainer": "Red Hat, Inc.",
+                "name": "ubi7",
+                "release": "140",
+                "summary": "Provides the latest release of the Red Hat Universal Base Image 7.",
+                "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi7/images/7.7-140",
+                "vcs-ref": "4c80c8aa26e69950ab11b87789c8fb7665b1632d",
+                "vcs-type": "git",
+                "vendor": "Red Hat, Inc.",
+                "version": "7.7"
+            }
+        },
+        "Version": "",
+        "Author": "",
+        "Architecture": "",
+        "Os": "",
+        "Size": 546243017,
+        "VirtualSize": 546243017,
+        "GraphDriver": {
+            "Name": "overlay",
+            "Data": {
+                "LowerDir": "/home/mbach/.local/share/containers/storage/overlay/15f6f472dfc8d1a417cbd0a14d3135444933ca20a1c526618e3fcfb9addcdfab/diff:/home/mbach/.local/share/containers/storage/overlay/4468e6d912c76d5b127f3554c3cd83b7dc07cce6107c6b916299ba76fa7d15ac/diff",
+                "UpperDir": "/home/mbach/.local/share/containers/storage/overlay/22431a29788c53e29edeca74e07022c478773ceb2189617af6b5e59a3a8ba14d/diff",
+                "WorkDir": "/home/mbach/.local/share/containers/storage/overlay/22431a29788c53e29edeca74e07022c478773ceb2189617af6b5e59a3a8ba14d/work"
+            }
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:4468e6d912c76d5b127f3554c3cd83b7dc07cce6107c6b916299ba76fa7d15ac",
+                "sha256:ecb0311889b3478bc9b62660fa9391d5ebf8da4c6ae143cb33434873668f9e36",
+                "sha256:82830110ea46e91da08d44b8e9838447a4935c0c358cea9a8ca23d7425a9b7df"
+            ]
+        },
+        "Labels": {
+            "architecture": "x86_64",
+            "authoritative-source-url": "registry.access.redhat.com",
+            "build-date": "2019-09-02T12:56:18.824770",
+            "com.redhat.build-host": "cpt-1005.osbs.prod.upshift.rdu2.redhat.com",
+            "com.redhat.component": "ubi7-container",
+            "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+            "description": "The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+            "distribution-scope": "public",
+            "io.k8s.description": "The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+            "io.k8s.display-name": "Red Hat Universal Base Image 7",
+            "io.openshift.tags": "base rhel7",
+            "maintainer": "Red Hat, Inc.",
+            "name": "ubi7",
+            "release": "140",
+            "summary": "Provides the latest release of the Red Hat Universal Base Image 7.",
+            "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi7/images/7.7-140",
+            "vcs-ref": "4c80c8aa26e69950ab11b87789c8fb7665b1632d",
+            "vcs-type": "git",
+            "vendor": "Red Hat, Inc.",
+            "version": "7.7"
+        },
+        "Annotations": {},
+        "ManifestType": "application/vnd.oci.image.manifest.v1+json",
+        "User": "",
+        "History": [
+            {
+                "created": "2019-09-02T12:56:36.440695936Z",
+                "comment": "Imported from -"
+            },
+            {
+                "created": "2019-09-02T12:56:43.939095Z"
+            },
+            {
+                "created": "2020-03-19T21:48:00.84153252Z",
+                "created_by": "/bin/sh -c #(nop) EXPOSE 8080",
+                "empty_layer": true
+            },
+            {
+                "created": "2020-03-19T22:39:59.479029464Z",
+                "created_by": "/bin/sh -c #(nop) ENV APP_ROOT=/opt/app-root",
+                "empty_layer": true
+            },
+            {
+                "created": "2020-03-19T22:54:30.842098342Z",
+                "created_by": "/bin/sh -c INSTALL_PKGS=\"gcc-c++   make   git\" \u0026\u0026   yum install -y $INSTALL_PKGS \u0026\u0026   curl -sL https://rpm.nodesource.com/setup_12.x | bash - \u0026\u0026   yum install -y nodejs \u0026\u0026   yum -y clean all \u0026\u0026   git clone https://github.com/RedHatGov/openshift-workshops.git ${APP_ROOT} \u0026\u0026   mv ${APP_ROOT}/dc-metro-map/* ${APP_ROOT} \u0026\u0026   chown -R 1001:0 ${APP_ROOT} \u0026\u0026 chmod -R ug+rwx ${APP_ROOT} \u0026\u0026   cd ${APP_ROOT} \u0026\u0026   ls \u0026\u0026   npm i \u0026\u0026   npm fund \u0026\u0026   npm audit fix \u0026\u0026   npm install debug "
+            },
+            {
+                "created": "2020-03-19T22:58:55.66058195Z",
+                "created_by": "/bin/sh -c #(nop) CMD [\"npm\", \"start\", \"--prefix\", \"/opt/app-root/\"]",
+                "empty_layer": true
+            }
+        ],
+        "NamesHistory": [
+            "localhost/dc-metro-map:7.8",
+            "localhost/dc-metro-map:7.7-140"
+        ]
+    }
+]
