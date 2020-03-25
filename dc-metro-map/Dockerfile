@@ -1,5 +1,8 @@
-FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-140
+#FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-140
 #FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.8
+#FROM registry.redhat.io/ubi7/ubi:7.7-140
+#FROM registry.redhat.io/ubi7/ubi:7.7-358
+FROM openshift/ubi7:latest
 
 EXPOSE 8080
 

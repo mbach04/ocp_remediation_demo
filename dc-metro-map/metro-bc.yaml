@@ -1,0 +1,51 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: "dc-metro-map"
+spec:
+  runPolicy: "Serial"
+  triggers:
+    - type: "ImageChange"
+  strategy:
+    dockerStrategy:
+      from:
+        kind: "ImageStreamTag"
+        name: "ubi7:latest"
+  source:
+    dockerfile: | 
+      FROM registry.redhat.io/ubi7/ubi:7.7-358
+      EXPOSE 8080
+      ENV APP_ROOT=/opt/app-root
+      RUN INSTALL_PKGS="gcc-c++ \
+        make \
+        git" && \
+        yum install -y $INSTALL_PKGS && \
+        curl -sL https://rpm.nodesource.com/setup_12.x | bash - && \
+        yum install -y nodejs && \
+        yum -y clean all && \
+        git clone https://github.com/RedHatGov/openshift-workshops.git ${APP_ROOT} && \
+        mv ${APP_ROOT}/dc-metro-map/* ${APP_ROOT} && \
+        chown -R 1001:0 ${APP_ROOT} && chmod -R ug+rwx ${APP_ROOT} && \
+        cd ${APP_ROOT} && \
+        ls && \
+        npm i && \
+        npm fund && \
+        npm audit fix && \
+        npm install debug 
+      CMD ["npm", "start", "--prefix", "/opt/app-root/"]
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "dc-metro-map:latest"
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: dc-metro-map
+    application: dc-metro-map
+    version: v1
+  name: dc-metro-map
+spec:
+  lookupPolicy:
+    local: true
