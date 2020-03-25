@@ -1,0 +1,39 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/image.dockerRepositoryCheck: "2020-03-25T15:25:07Z"
+  creationTimestamp: "2020-03-25T15:25:07Z"
+  generation: 2
+  name: map-1
+  namespace: remediation-demo
+  resourceVersion: "2676771"
+  selfLink: /apis/image.openshift.io/v1/namespaces/remediation-demo/imagestreams/map-1
+  uid: b1eec761-eddd-4377-a619-d0735779072b
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: image-registry.openshift-image-registry.svc:5000/remediation-demo/dc-metro-map:latest
+    generation: 2
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/remediation-demo/map-1
+  tags:
+  - conditions:
+    - generation: 2
+      lastTransitionTime: "2020-03-25T15:25:07Z"
+      message: 'Internal error occurred: image-registry.openshift-image-registry.svc:5000/remediation-demo/dc-metro-map:latest:
+        Get https://image-registry.openshift-image-registry.svc:5000/v2/: x509: certificate
+        signed by unknown authority'
+      reason: InternalError
+      status: "False"
+      type: ImportSuccess
+    items: null
+    tag: latest

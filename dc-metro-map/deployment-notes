@@ -1,6 +1,6 @@
 skopeo copy --dest-tls-verify=false containers-storage:localhost/dc-metro-map:7.7-358 docker://quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/demoapps/dc-metro-map:latest
 
-oc import-image quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/demoapps/dc-metro-map --insecure=true --confirm
+oc import-image quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/demoapps/dc-metro-map --insecure=true --scheduled=true --confirm
 
 oc new-app dc-metro-map --name map-1
 oc expose svc map-1
@@ -14,4 +14,7 @@ skopeo copy --dest-tls-verify=false docker://registry.redhat.io/ubi7/ubi:7.7-310
 #overall flow
 # UBI7 IS -> imageChange trigger -> APP BC -> APP IS -> imageChange trigger -> APP DC -> APP POD
 
-#can just tag 
+# To update the base UBI7 layer, and thus all downstream apps
+skopeo copy --dest-tls-verify=false docker://registry.redhat.io/ubi7/ubi:7.7-{NEW_VERSION} docker://quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:latest
+oc import-image ubi7
+oc get events -w

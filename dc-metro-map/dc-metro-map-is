@@ -1,0 +1,26 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  creationTimestamp: "2020-03-25T15:19:00Z"
+  generation: 1
+  labels:
+    app: dc-metro-map
+    application: dc-metro-map
+    version: v1
+  name: dc-metro-map
+  namespace: remediation-demo
+  resourceVersion: "2675906"
+  selfLink: /apis/image.openshift.io/v1/namespaces/remediation-demo/imagestreams/dc-metro-map
+  uid: 7137baeb-bb1b-4b5d-8daf-f5f54f9dd4f6
+spec:
+  lookupPolicy:
+    local: true
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/remediation-demo/dc-metro-map
+  tags:
+  - items:
+    - created: "2020-03-25T15:21:53Z"
+      dockerImageReference: image-registry.openshift-image-registry.svc:5000/remediation-demo/dc-metro-map@sha256:3614942d9fc31d69174e400e837e16ed586b2074b59306bcd1bf007819784913
+      generation: 1
+      image: sha256:3614942d9fc31d69174e400e837e16ed586b2074b59306bcd1bf007819784913
+    tag: latest

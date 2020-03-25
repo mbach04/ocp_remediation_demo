@@ -1,0 +1,52 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: "nodejs-demo-app"
+spec:
+  runPolicy: "Serial"
+  triggers:
+    - type: "ImageChange"
+  strategy:
+    dockerStrategy:
+      from:
+        kind: "ImageStreamTag"
+        name: "ubi7:latest"
+  source:
+    dockerfile: |
+      FROM registry.redhat.io/ubi7/ubi:7.7-358
+      ENV APP_ROOT=/opt/app-root
+      EXPOSE 3000
+      RUN INSTALL_PKGS="gcc-c++ \
+        make \
+        git" && \
+        yum install -y $INSTALL_PKGS && \
+        curl -sL https://rpm.nodesource.com/setup_12.x | bash - && \
+        yum install -y nodejs && \
+        yum -y clean all && \
+        git clone https://github.com/mbach04/nodejs-demoapp.git ${APP_ROOT} && \
+        mv ${APP_ROOT}/src/* ${APP_ROOT} && \
+        # Drop the root user and make the content of /opt/app-root owned by user 1001
+        chown -R 1001:0 ${APP_ROOT} && chmod -R ug+rwx ${APP_ROOT} && \
+        cd ${APP_ROOT} && \
+        ls && \
+        npm i --production && \
+        npm fund && \
+        npm audit fix && \
+        npm install debug 
+      CMD ["npm", "start", "--prefix", "/opt/app-root/"]
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "nodejs-demo-app:latest"
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: nodejs-demo-app
+    application: nodejs-demo-app
+    version: v1
+  name: nodejs-demo-app
+spec:
+  lookupPolicy:
+    local: true
