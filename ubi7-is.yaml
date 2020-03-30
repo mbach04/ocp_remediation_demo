@@ -1,0 +1,79 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/image.dockerRepositoryCheck: "2020-03-30T21:43:10Z"
+  creationTimestamp: "2020-03-24T21:46:07Z"
+  generation: 12
+  name: ubi7
+  namespace: remediation-demo
+  resourceVersion: "5152607"
+  selfLink: /apis/image.openshift.io/v1/namespaces/remediation-demo/imagestreams/ubi7
+  uid: 9ef69987-d63f-4f97-9410-835bb2641ba1
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7
+    generation: 12
+    importPolicy:
+      insecure: true
+    name: latest
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/remediation-demo/ubi7
+  tags:
+  - items:
+    - created: "2020-03-30T21:43:10Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:28b97f3cc5fbd4ad487cc01b43c4e25f3cbf55707f63ceda74cd9a9d203c46e4
+      generation: 12
+      image: sha256:28b97f3cc5fbd4ad487cc01b43c4e25f3cbf55707f63ceda74cd9a9d203c46e4
+    - created: "2020-03-30T20:58:50Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:4d089328c28ae69cb42f40c6fdb9ef60aa5897c4e1870cda6903a9ccd06d8746
+      generation: 11
+      image: sha256:4d089328c28ae69cb42f40c6fdb9ef60aa5897c4e1870cda6903a9ccd06d8746
+    - created: "2020-03-30T20:46:36Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:28b97f3cc5fbd4ad487cc01b43c4e25f3cbf55707f63ceda74cd9a9d203c46e4
+      generation: 10
+      image: sha256:28b97f3cc5fbd4ad487cc01b43c4e25f3cbf55707f63ceda74cd9a9d203c46e4
+    - created: "2020-03-27T18:26:11Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:b3992c9c73dabb511efcab75071e3b5ee0d7debcc82ac79178e15415d19c336b
+      generation: 9
+      image: sha256:b3992c9c73dabb511efcab75071e3b5ee0d7debcc82ac79178e15415d19c336b
+    - created: "2020-03-26T21:59:54Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:4d089328c28ae69cb42f40c6fdb9ef60aa5897c4e1870cda6903a9ccd06d8746
+      generation: 8
+      image: sha256:4d089328c28ae69cb42f40c6fdb9ef60aa5897c4e1870cda6903a9ccd06d8746
+    - created: "2020-03-26T19:38:28Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:4c08401092ea6b2980ec2133a19a52857e7d1f0f025f13839f1ea4c3903ac18d
+      generation: 7
+      image: sha256:4c08401092ea6b2980ec2133a19a52857e7d1f0f025f13839f1ea4c3903ac18d
+    - created: "2020-03-25T19:02:27Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:deac4007a5ed626c25cdb833874dfc181625ebcdff8276cbdf8805fa2852cecd
+      generation: 6
+      image: sha256:deac4007a5ed626c25cdb833874dfc181625ebcdff8276cbdf8805fa2852cecd
+    - created: "2020-03-25T18:53:09Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:e0e45cd7a8dc633a014f6afffa569665f8271f8d089dfc7a69cdbc2362497382
+      generation: 5
+      image: sha256:e0e45cd7a8dc633a014f6afffa569665f8271f8d089dfc7a69cdbc2362497382
+    - created: "2020-03-25T18:40:49Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:ef1c643787351a3b5f8eb5c5a956d3a4a534ce1f9e72e412f7faeae145cc2925
+      generation: 4
+      image: sha256:ef1c643787351a3b5f8eb5c5a956d3a4a534ce1f9e72e412f7faeae145cc2925
+    - created: "2020-03-25T17:34:15Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:0740a113da38c74c51e3e5c72cbf3587e311df83f08f9b94dfc0bd1bcaaa09bb
+      generation: 3
+      image: sha256:0740a113da38c74c51e3e5c72cbf3587e311df83f08f9b94dfc0bd1bcaaa09bb
+    - created: "2020-03-25T17:27:47Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:ef1c643787351a3b5f8eb5c5a956d3a4a534ce1f9e72e412f7faeae145cc2925
+      generation: 2
+      image: sha256:ef1c643787351a3b5f8eb5c5a956d3a4a534ce1f9e72e412f7faeae145cc2925
+    - created: "2020-03-24T21:46:07Z"
+      dockerImageReference: quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7@sha256:0740a113da38c74c51e3e5c72cbf3587e311df83f08f9b94dfc0bd1bcaaa09bb
+      generation: 1
+      image: sha256:0740a113da38c74c51e3e5c72cbf3587e311df83f08f9b94dfc0bd1bcaaa09bb
+    tag: latest
