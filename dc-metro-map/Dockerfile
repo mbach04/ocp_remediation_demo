@@ -1,5 +1,5 @@
-#FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-140
-FROM redhat/ubi/ubi7:7.8
+FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-214
+#FROM redhat/ubi/ubi7:7.8
 EXPOSE 8080
 
 ENV APP_ROOT=/opt/app-root
@@ -8,8 +8,7 @@ RUN rm -rf /etc/yum.repos.d/ironbank.repo && \
   curl https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/ubi.repo -o /etc/yum.repos.d/ubi.repo && \
   curl https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/redhat.repo -o /etc/yum.repos.d/redhat.repo && \
   sed -i "/localpkg/s/^/#/" /etc/yum.conf && \
-  sed -i "/repo_gpgcheck/s/^/#/" /etc/yum.conf && \
-  yum update
+  sed -i "/repo_gpgcheck/s/^/#/" /etc/yum.conf 
 RUN INSTALL_PKGS="gcc-c++ \
   make \
   git" && \

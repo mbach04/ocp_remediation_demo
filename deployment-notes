@@ -5,6 +5,8 @@ oc import-image quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/demoa
 oc new-app dc-metro-map --name map-1
 oc expose svc map-1
 
+# populate ubi images into quay
+for tag in 7.7-358 7.7-214 7.7-99; do skopeo copy --dest-tls-verify=false docker://registry.redhat.io/ubi7/ubi:$tag docker://quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:$tag; done
 
 
 skopeo copy --dest-tls-verify=false docker://registry.redhat.io/ubi7/ubi:7.7-310 docker://quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-310
