@@ -22,12 +22,8 @@ oc create -f https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/mast
 oc expose svc/dc-metro-map
 oc expose svc/nodejs-demo-app
 ```
-### After the builds have completed and you can route to the app, move the `latest` tag to a newer version of UBI7 in your registry then update the image stream:
+After the builds have completed and you can route to the app, move the `latest` tag to a newer version of UBI7 in your registry then update the image stream:
 ```bash
 oc import-image ubi7
 ```
-
-
-
-
-- 
+From here you should see the rolling deployment kick off and replace the underlying UBI7 baselayer on each application deployed.
