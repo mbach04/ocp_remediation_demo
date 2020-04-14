@@ -9,6 +9,8 @@
 - Update the `latest` tag to be the most recent version of UBI
 - Run the `oc import-image ubi7` command to start rolling deployment(s) of UBI7 based apps
 
+### UBI7 sitting on Quay.io
+![quay.io](https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/images/quayio-ubi7-dcar-example.png)
 
 ### Steps to accomplish the above
 ```bash
