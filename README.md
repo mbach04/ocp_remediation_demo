@@ -20,6 +20,9 @@ oc import-image quay.io/redhat/ubi7
 # Create the build configs
 oc create -f https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/dc-metro-map/metro-bc-dcar.yaml
 oc create -f https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/nodejs-demoapp/nodejs-bc-dcar.yaml
+# Create new apps from each BC (results in DeploymentConfigs)
+oc new-app dc-metro-map --name map-1
+oc new-app nodejs-demo-app --name nodejs-demo
 # Expose the services as OpenShift routes
 oc expose svc/dc-metro-map
 oc expose svc/nodejs-demo-app
