@@ -11,6 +11,8 @@
 
 ### UBI7 sitting on Quay.io
 ![quay.io](https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/images/quayio-ubi7-dcar-example.png)
+### Flow chart
+![quay.io](https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/images/flowchart.png)
 
 ### Steps to accomplish the above
 ```bash
