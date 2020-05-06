@@ -1,4 +1,5 @@
 skopeo copy --dest-tls-verify=false containers-storage:localhost/dc-metro-map:7.7-358 docker://quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/demoapps/dc-metro-map:latest
+#insert note here
 
 oc import-image quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/demoapps/dc-metro-map --insecure=true --scheduled=true --confirm
 
