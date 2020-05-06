@@ -1,4 +1,4 @@
-FROM quayecosystem-quay-quay-operator.apps.ocp.mybachsbrain.com/redhat/ubi7:7.7-214
+FROM quay.io/redhat/ubi7:7.7-214
 #FROM redhat/ubi/ubi7:7.8
 EXPOSE 8080
 
