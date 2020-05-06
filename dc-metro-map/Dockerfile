@@ -26,6 +26,7 @@ RUN INSTALL_PKGS="gcc-c++ \
   npm fund && \
   npm audit fix && \
   npm install debug 
+USER 1001
 
 CMD ["npm", "start", "--prefix", "/opt/app-root/"]
 
