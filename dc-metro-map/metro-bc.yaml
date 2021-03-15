@@ -13,7 +13,7 @@ spec:
         name: "ubi7:latest"
   source:
     dockerfile: | 
-      FROM registry.redhat.io/ubi7/ubi:7.7-358
+      FROM quay.io/mbach/ubi7:7.7-99
       EXPOSE 8080
       ENV APP_ROOT=/opt/app-root
       RUN INSTALL_PKGS="gcc-c++ \
