@@ -18,7 +18,7 @@
 ```bash
 oc new-project remediation-demo
 # Create the image stream
-oc import-image quay.io/redhat/ubi7
+oc import-image quay.io/redhat/ubi7 --confirm
 # Create the build configs
 oc create -f https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/dc-metro-map/metro-bc-dcar.yaml
 oc create -f https://raw.githubusercontent.com/mbach04/ocp_remediation_demo/master/nodejs-demoapp/nodejs-bc-dcar.yaml
