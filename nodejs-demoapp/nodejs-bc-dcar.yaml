@@ -13,7 +13,7 @@ spec:
         name: "ubi7:latest"
   source:
     dockerfile: |
-      FROM registry.redhat.io/ubi7/ubi:7.7-358
+      FROM registry.redhat.io/ubi7/ubi:7.7-99
       ENV APP_ROOT=/opt/app-root
       EXPOSE 3000
       RUN rm -rf /etc/yum.repos.d/ironbank.repo && \
