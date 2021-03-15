@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ubi7/ubi:7.7-140
+FROM quay.io/mbach/ubi7:7.7-7-99
 #FROM registry.redhat.io/ubi7/ubi:7.7-358
 
 EXPOSE 3000 

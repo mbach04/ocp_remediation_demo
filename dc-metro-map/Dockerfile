@@ -1,4 +1,4 @@
-FROM quay.io/redhat/ubi7:7.7-214
+FROM quay.io/mbach/ubi7:7.7-99
 #FROM redhat/ubi/ubi7:7.8
 EXPOSE 8080
 
