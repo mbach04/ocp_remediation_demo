@@ -16,7 +16,7 @@ RUN INSTALL_PKGS="gcc-c++ \
   curl -sL https://rpm.nodesource.com/setup_12.x | bash - && \
   yum install -y nodejs && \
   yum -y clean all && \
-  git clone https://github.com/RedHatGov/openshift-workshops.git ${APP_ROOT} && \
+  git clone https://github.com/mbach04/openshift-workshops.git ${APP_ROOT} && \
   mv ${APP_ROOT}/dc-metro-map/* ${APP_ROOT} && \
   # Drop the root user and make the content of /opt/app-root owned by user 1001
   chown -R 1001:0 ${APP_ROOT} && chmod -R ug+rwx ${APP_ROOT} && \
