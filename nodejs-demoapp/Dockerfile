@@ -1,7 +1,7 @@
-FROM quay.io/mbach/ubi7:7.7-7-99
+FROM quay.io/mbach/ubi7:7.7-99
 #FROM registry.redhat.io/ubi7/ubi:7.7-358
 
-EXPOSE 3000 
+EXPOSE 8080
 
 ENV APP_ROOT=/opt/app-root
 
